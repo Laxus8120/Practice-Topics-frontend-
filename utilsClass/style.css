@@ -1,0 +1,219 @@
+html{
+    box-sizing: border-box;
+}
+
+*,*::after,*::before{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100vw; /* 100% of the viewport width */
+    height: 100vh; /* 100% of the viewport height */
+    background-color: #134E5E;
+    background-image: radial-gradient(circle at 48.07% 50.9%, #003c40 0, #003c45 4.55%, #003c49 9.09%, #003b4d 13.64%, #003b51 18.18%, #003a54 22.73%, #003956 27.27%, #003858 31.82%, #003759 36.36%, #00355a 40.91%, #11345a 45.45%, #1f3259 50%, #293057 54.55%, #322e55 59.09%, #392c53 63.64%, #402a4f 68.18%, #45284c 72.73%, #4a2647 77.27%, #4e2443 81.82%, #51233e 86.36%, #542239 90.91%, #552134 95.45%, #57212f 100%);
+    font-size: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header nav {
+    width: 100px;
+}
+
+.main{
+    flex: 3;
+}
+.aside{
+    height: 100vh;
+    width: 100%;
+    margin-top: 20px;
+    background-color: #00355a;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+aside > div{
+    width: 70px;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+li{
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+li span{
+    margin-left: 7px;
+}
+
+.icon{
+    padding: 4px;
+    margin: 0;
+    font-size: 6px;
+    font-weight: bold;
+}
+
+.nav{
+    display: flex;
+    justify-content: end;
+    margin-top: 5px;
+    width: 100%;
+    height: 100%;
+    position: sticky;
+    bottom: 0;
+}
+
+a{
+    position: relative;
+    display: inline-block;
+    color: #03e9f4;
+    padding: 3px 3px;
+    margin: 2px 0;    
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 2px;
+    overflow: hidden;
+    margin-right: 50px;
+    font-family: sans-serif;
+}
+
+a span{
+    position: absolute;
+    display: block;
+}
+
+a span:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1 {
+    0% {
+        left: -100%;
+    }
+    50%, 100% {
+        left: 100%;
+    }
+}
+
+a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent, #03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+
+@keyframes animate2 {
+    0% {
+        top: -100%;
+    }
+    50%, 100% {
+        top: 100%;
+    }
+}
+
+a span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+
+@keyframes animate3 {
+    0% {
+        right: -100%;
+    }
+    50%, 100% {
+        right: 100%;
+    }
+}
+
+a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+
+@keyframes animate4 {
+    0% {
+        bottom: -100%;
+    }
+    
+    50%, 100% {
+        bottom: 100%;
+    }
+}
+
+a:hover {
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+        0 0 25px #03e9f4,
+        0 0 50px #03e9f4,
+        0 0 200px #03e9f4;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+    border-radius: 2px;
+}
+
+.handle{
+    height: 50px;
+    margin: 2px 0 3px 8px;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    display: flex;
+    align-items: center;
+}
+
+.profile_Photo img{
+    width: 38px;
+    height: 38px;
+    background-color: pink;
+    border-radius: 50%;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+.tittle{
+    margin-left: 10px;
+    font-size: 0.5rem;
+    font-family: sans-serif;
+}
+
+.cards{
+    display: flex;  
+    flex-wrap: wrap;  
+    margin-left: 10px;
+}
+
+.card{
+    border: solid red 1px;
+    margin: 2px;
+    background-color: grey;
+    width: 250px;
+    height: 150px;
+    border-radius: 5%;
+}
