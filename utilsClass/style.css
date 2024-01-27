@@ -11,15 +11,15 @@ body{
     padding: 0;
     width: 100vw; /* 100% of the viewport width */
     height: 100vh; /* 100% of the viewport height */
-    background-color: #134E5E;
-    background-image: radial-gradient(circle at 48.07% 50.9%, #003c40 0, #003c45 4.55%, #003c49 9.09%, #003b4d 13.64%, #003b51 18.18%, #003a54 22.73%, #003956 27.27%, #003858 31.82%, #003759 36.36%, #00355a 40.91%, #11345a 45.45%, #1f3259 50%, #293057 54.55%, #322e55 59.09%, #392c53 63.64%, #402a4f 68.18%, #45284c 72.73%, #4a2647 77.27%, #4e2443 81.82%, #51233e 86.36%, #542239 90.91%, #552134 95.45%, #57212f 100%);
+    background-color: #302d2d;
+    /* background-image: radial-gradient(circle at 48.07% 50.9%, #003c40 0, #003c45 4.55%, #003c49 9.09%, #003b4d 13.64%, #003b51 18.18%, #003a54 22.73%, #003956 27.27%, #003858 31.82%, #003759 36.36%, #00355a 40.91%, #11345a 45.45%, #1f3259 50%, #293057 54.55%, #322e55 59.09%, #392c53 63.64%, #402a4f 68.18%, #45284c 72.73%, #4a2647 77.27%, #4e2443 81.82%, #51233e 86.36%, #542239 90.91%, #552134 95.45%, #57212f 100%); */
     font-size: 0.5rem;
     display: flex;
     justify-content: space-between;
 }
 
 .header nav {
-    width: 100px;
+    width: 150px;
 }
 
 .main{
@@ -57,14 +57,16 @@ li span{
 
 .icon{
     padding: 4px;
-    margin: 0;
-    font-size: 6px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    font-size: 10px;
     font-weight: bold;
 }
 
 .nav{
     display: flex;
     justify-content: end;
+    align-items: center;
     margin-top: 5px;
     width: 100%;
     height: 100%;
@@ -72,7 +74,17 @@ li span{
     bottom: 0;
 }
 
-a{
+#burger{
+    height: 100%;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+    display: none;
+}
+
+ a{
     position: relative;
     display: inline-block;
     color: #03e9f4;
@@ -83,16 +95,16 @@ a{
     transition: 0.5s;
     letter-spacing: 2px;
     overflow: hidden;
-    margin-right: 50px;
+    margin-right: 30px;
     font-family: sans-serif;
 }
 
-a span{
+.nav a span{
     position: absolute;
     display: block;
 }
 
-a span:nth-child(1) {
+.nav a span:nth-child(1) {
     top: 0;
     left: 0;
     width: 100%;
@@ -110,7 +122,7 @@ a span:nth-child(1) {
     }
 }
 
-a span:nth-child(2) {
+.nav a span:nth-child(2) {
     top: -100%;
     right: 0;
     width: 1px;
@@ -129,7 +141,7 @@ a span:nth-child(2) {
     }
 }
 
-a span:nth-child(3) {
+.nav a span:nth-child(3) {
     bottom: 0;
     right: 0;
     width: 100%;
@@ -148,7 +160,7 @@ a span:nth-child(3) {
     }
 }
 
-a span:nth-child(4) {
+.nav a span:nth-child(4) {
     bottom: -100%;
     left: 0;
     width: 1px;
@@ -180,7 +192,7 @@ a:hover {
 }
 
 .handle{
-    height: 50px;
+    height: 80px;
     margin: 2px 0 3px 8px;
     background-color: #4158D0;
     background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
@@ -189,17 +201,31 @@ a:hover {
 }
 
 .profile_Photo img{
-    width: 38px;
-    height: 38px;
+    width: 100%;
+    height: 100%;
     background-color: pink;
     border-radius: 50%;
     margin-left: 6px;
     margin-right: 6px;
 }
 
+.info{
+    margin-left: 10px;
+    font-size: large;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.bio{
+    font-size: small;
+    font-weight: lighter;
+}
+
 .tittle{
     margin-left: 10px;
-    font-size: 0.5rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 0.8rem;
     font-family: sans-serif;
 }
 
@@ -207,13 +233,109 @@ a:hover {
     display: flex;  
     flex-wrap: wrap;  
     margin-left: 10px;
+    gap: 1rem;
 }
 
-.card{
-    border: solid red 1px;
-    margin: 2px;
+.skills{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: 30px;
+}
+.skill_template{
+    margin: 2px 4px 4px 3px;
+    padding: 5px;
+}
+.skills_cards{
+    display: flex;
+    flex-direction: column;
+    border: solid 1px red;
+    width: 10rem;
+    height: 100px;
     background-color: grey;
+    border-radius: 6%;
+}
+
+.skills_block{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: space-evenly;
+}
+
+.heading{
+    margin: 5px 0 5px 5px;
+    max-width: fit-content;
+    font-size: medium;
+    font-family: sans-serif;
+    font-weight: bold;
+    border: goldenrod solid 1px;
+    border-radius: 10%;
+    padding: 2px;
+}
+
+.skills_block div{
+    border: solid palegreen 2px;
+    padding: 3px;
+    border-radius: 10%;
+}
+
+.more_Projects{
+    width: 15rem;
+    height: 15rem;
+    border: solid red 1px;
+    margin: 30px;
+}
+
+.More_project_block{
+    display: flex;    
+}
+
+.more_Projects_logo{
+    flex: 1;
+    margin-left: 5px;
+}
+
+.description{
+    flex: 6;
+}
+
+.Other_cards{
+    display: flex;
+    flex-direction: column;
+    width: 10rem;
+    height: 100px;
+    background-color: rgb(32, 153, 209);
+    border-radius: 6%;
+}
+
+
+/* cards css */
+.card{
+    position: relative;
+    margin: 2px;
+    background-color:#FFDAB9; 
     width: 250px;
     height: 150px;
-    border-radius: 5%;
+    border: 1px solid #dddddd; /* Optional: Add border for styling */
+    border-radius: 8px; /* Optional: Add border-radius for rounded corners */
+    overflow: hidden; /* Prevent content overflow */
+}
+
+
+.card-img-top {
+    width: 100%; /* Make the image fill the entire width of the card */
+    height: 100%; /* Maintain aspect ratio */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card-body {
+    position: absolute;
+    height: 75px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgb(255, 255, 255,0.4); /* Add a semi-transparent background for better readability */
+    padding-left: .2rem;
 }

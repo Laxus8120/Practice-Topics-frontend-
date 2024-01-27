@@ -1,0 +1,9 @@
+.container{
+    background-color: rebeccapurple;
+    color: white;
+    width: 20rem;
+    height: 20rem;
+    font-size: 1rem;
+    padding: 1em;
+    border: solid red 1px;
+}

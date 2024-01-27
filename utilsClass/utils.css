@@ -1,5 +1,5 @@
 .container {
-    max-width: 1536px;
+    width: 1536px;
     height: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -31,6 +31,20 @@
       .container {
         max-width: 640px;
       }
+      .cards{
+        width: 100%;
+        margin-left: 20px;
+        gap: 1rem;
+      }
+    .header{
+      display: none;
+    }
+    #burger{
+      display: block;
+    }
+    .skills{
+      margin-left: 50px;
+    }
     }
 
       /* sm */
@@ -39,11 +53,24 @@
       max-width: 475px;
     }
     .cards{
-        flex-direction: column;
+      margin-left: 0px;
     }
-    .header{
-      display: none;
+    .card{
+      width: 100%;
+      height: 250px;
+      margin-bottom: 5px;
     }
+    .skills{
+      margin-left: 0;
+      align-items: center;
+      justify-content: center;
+    }
+    .skills_cards{
+      width: 250px;
+      height: 100px;
+      border-radius: 4%;
+    }
+
   }
 
   /* xs */

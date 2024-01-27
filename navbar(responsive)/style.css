@@ -41,3 +41,9 @@ body{
         display: none;
     }
 }
+
+.skills_cards{
+    display: flex;
+    flex-direction: row;
+    border: solid 1px red;
+}
